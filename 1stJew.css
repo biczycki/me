@@ -1,0 +1,221 @@
+/* General styles */
+html {
+  font-size: 16px; /* Base font size */
+}
+
+body {
+  margin-left: 10%;
+  margin-right: 10%;
+  background: linear-gradient(to bottom, lightgray 0%, Wheat 100%);
+  line-height: 1.4;
+  padding: 0 15px;
+  opacity: 0;
+  animation: fadein 1.5s ease forwards;
+}
+
+/* Fade animations */
+@keyframes fadein {
+  to { opacity: 1; }
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out; /* Faster for page transitions */
+}
+
+/* Header styles */
+.header {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #2c3e50, #4a6491);
+  color: white;
+  border-radius: 10px;
+  margin: 0 auto 30px auto;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.header_img {
+  max-width: 50%;
+  height: auto;
+  transition: transform 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+.header video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  box-sizing: border-box;
+  word-break: break-word;
+  background-color: Ivory;
+  color: #333;
+  table-layout: fixed;
+}
+
+td, th {
+  vertical-align: top;
+  font-size: 0.9em; /* Improved readability */
+  padding: 8px;
+  text-align: center;
+}
+
+table img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Float styles */
+.float-right {
+  float: right;
+  margin: 0.5em 0 0.5em 1.5em;
+  transition: transform 0.3s ease;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.float-left {
+  float: left;
+  margin: 0.5em 1.5em 0.5em 0;
+  transition: transform 0.3s ease;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.float-right:hover, .float-left:hover {
+  transform: scale(2.0);
+  transform-origin: center;
+}
+
+/* Link styles */
+a {
+  color: Navy;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #4a6491;
+  text-decoration: none;
+}
+
+/* Footer styles */
+.footer {
+  height: 2.5em;
+  line-height: 2.5em;
+  background-color: lightgray;
+  color: black;
+  cursor: pointer;
+  padding: 0 0.5em;
+  display: block;
+  white-space: nowrap;
+  text-align: center;
+  margin-top: 2em;
+}
+
+.footer.expanded {
+  height: auto; /* Dynamic height for content */
+  white-space: normal; /* Allow wrapping */
+}
+
+.defined-term {
+      color: DarkSlateBlue;
+      text-decoration: underline dotted;
+      cursor: pointer;
+      position: relative;
+    }
+.definition-box {
+      display: none;
+      position: absolute;
+      top: 1.7em;
+      left: 0;
+      width: 33vw;
+      max-width: 70vw; 
+      min-width: 180px;
+      background: #fcfcfc;
+      border: 1px solid #1464A5;
+      color: #222;
+      padding: 12px;
+      z-index: 10;
+      border-radius: 8px;
+      font-size: 0.95em;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.17);
+    }
+
+/* Media queries */
+@media (orientation: portrait) {
+  html {
+    font-size: 2.5vw; /* Scales with viewport width */
+  }
+}
+
+@media (orientation: landscape) {
+  html {
+    font-size: 1.5vw;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .header {
+    padding: 20px 10px;
+  }
+  .header_img {
+    max-width: 80%;
+  }
+  table, thead, tbody, tr, th, td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  tr {
+    margin-bottom: 1em;
+    border-bottom: 1px solid #ccc;
+  }
+  td {
+    text-align: center;
+    padding: 0.5em;
+    position: relative;
+  }
+  td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5em;
+  }
+  .float-right, .float-left {
+    float: none;
+    display: block;
+    margin: 0.5em auto;
+    max-width: 100%;
+  }
+  .float-right:hover, .float-left:hover {
+    transform: none; /* Disable hover zoom on mobile */
+  }
+  div[style*="flex"] {
+    flex-direction: column;
+    gap: 1em;
+  }
+  div[style*="flex"] a {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    font-size: 1em;
+  }
+}
+

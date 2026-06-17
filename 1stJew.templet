@@ -1,0 +1,49 @@
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="expires" content="0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Deutschland aus Sicht des ersten in Krakau nach dem Holocaust geborenen Juden, Tomasz Abrahamer">
+    <meta name="keywords" content="Judentum, Israel, Deutschland">
+    <meta name="author" content="Tomasz Abrahamer">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="1stJew.css">
+    
+    
+    <title>1stJew - titel</title>
+    
+    
+    
+</head>
+<body>
+
+
+
+<p> text </p>
+
+
+<div class="footer" id="footer">
+<table>
+  <tr>
+  <th><button onclick="history.back()" style="background-color: DodgerBlue; color: white; border-radius: 5px;"><b><-- Zurück <--</b></button></th>
+    <th>&copy; Copyright</td>
+    <th>&#10017; Impressum</td>
+    <th>&#128386; Kontakt</td>
+  </tr>
+  <td></td>
+<td>Alle Texte Gemeinfrei nach Creative Commons CC0 1.0 Universal Public Domain Dedication.<br>Fotos/Videos/Grafiken können urheberlechlich geschützt sein.</td>
+<td>Für den Inhalt vernatwortlich:<br>Tomasz Dominik Abrahamer<br>Genthiner Straße 27<br>14774 Brandenburg an der Havel</td>
+<td>Tel: 0176 98 1000 80<br>Mail: TomaszAbrahamer@gmail.com</td>
+</table>
+</div>
+
+<script>
+  document.getElementById('footer').addEventListener('click', function() {
+  this.classList.toggle('expanded');
+  this.scrollIntoView({ behavior: 'smooth' });
+});
+</script>
+
+</body>
+</html>
+
