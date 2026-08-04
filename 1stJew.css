@@ -6,7 +6,7 @@ html {
 body {
   margin-left: 10%;
   margin-right: 10%;
-  background: linear-gradient(to bottom, lightgray 0%, Wheat 100%);
+  background: linear-gradient(to bottom, Wheat 100%, lightgray 0%);
   line-height: 1.4;
   padding: 0 15px;
   opacity: 0;
@@ -27,7 +27,7 @@ body {
 .header {
   text-align: center;
   padding: 40px 20px;
-  background: linear-gradient(135deg, #4a6491, #2c3e50);
+  background: linear-gradient(135deg, #2c3e50, #4a6491);
   color: white;
   border-radius: 10px;
   margin: 0 auto 30px auto;
