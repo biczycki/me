@@ -6,7 +6,7 @@ html {
 body {
   margin-left: 10%;
   margin-right: 10%;
-  background: linear-gradient(to bottom, Wheat 100%, lightgray 0%);
+  background: linear-gradient(to bottom, Wheat, lightgray);
   line-height: 1.4;
   padding: 0 15px;
   opacity: 0;
